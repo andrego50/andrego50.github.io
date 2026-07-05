@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /blog/_template.html
+
+Sitemap: https://andres-perez-coronado.fastanalytics.co/sitemap.xml
+
+# LLM-friendly structured info
+# See https://andres-perez-coronado.fastanalytics.co/llms.txt

@@ -1,0 +1,133 @@
+<!-- DUPLICATE this file to create a new post. Replace every __TOKEN__ placeholder.
+     Then: (1) add a .blog-card entry in blog/index.html, (2) add a <url> for the new
+     post in sitemap.xml. This file itself must stay unlinked, noindex, and out of
+     sitemap.xml/robots.txt's Allow list — it is not a real page. -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>__POST_TITLE_ES__ | Andrés Pérez Coronado</title>
+  <meta name="description" content="__POST_EXCERPT_ES__">
+  <meta name="author" content="Andrés Pérez Coronado">
+
+  <meta property="og:title" content="__POST_TITLE_ES__">
+  <meta property="og:description" content="__POST_EXCERPT_ES__">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://andres-perez-coronado.fastanalytics.co/blog/__POST_SLUG__.html">
+  <meta property="og:image" content="https://andres-perez-coronado.fastanalytics.co/assets/images/andres-perez.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="__POST_TITLE_ES__">
+  <meta name="twitter:description" content="__POST_EXCERPT_ES__">
+  <meta name="twitter:image" content="https://andres-perez-coronado.fastanalytics.co/assets/images/andres-perez.jpg">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16.png">
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+  <link rel="canonical" href="https://andres-perez-coronado.fastanalytics.co/blog/__POST_SLUG__.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css?v=1">
+  <link rel="stylesheet" href="../css/site.css?v=1">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="../index.html" class="nav-logo">
+        <span style="font-weight:800;font-size:1.1rem;letter-spacing:-0.02em;">Andrés Pérez Coronado</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+        <li><a href="../trayectoria.html" data-es="Trayectoria" data-en="Background" data-fr="Parcours">Trayectoria</a></li>
+        <li><a href="../portafolio.html" data-es="Portafolio" data-en="Portfolio" data-fr="Portfolio">Portafolio</a></li>
+        <li><a href="index.html" data-es="Blog" data-en="Blog" data-fr="Blog">Blog</a></li>
+        <li><a href="../index.html#contacto" data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+          <span class="lang-option active" data-lang="es">ES</span>
+          <span class="lang-separator">|</span>
+          <span class="lang-option" data-lang="en">EN</span>
+          <span class="lang-separator">|</span>
+          <span class="lang-option" data-lang="fr">FR</span>
+        </button>
+        <a href="mailto:hola@fastanalytics.co" class="btn btn-primary btn-nav" data-es="Hablemos" data-en="Let's talk" data-fr="Parlons">Hablemos</a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <article class="blog-post">
+    <div class="blog-post-byline" data-es="Andrés Pérez Coronado · __POST_DATE__" data-en="Andrés Pérez Coronado · __POST_DATE__" data-fr="Andrés Pérez Coronado · __POST_DATE__">Andrés Pérez Coronado · __POST_DATE__</div>
+    <h1 data-es="__POST_TITLE_ES__" data-en="__POST_TITLE_EN__" data-fr="__POST_TITLE_FR__">__POST_TITLE_ES__</h1>
+
+    <p data-es="__POST_BODY_ES_P1__" data-en="__POST_BODY_EN_P1__" data-fr="__POST_BODY_FR_P1__">__POST_BODY_ES_P1__</p>
+    <p data-es="__POST_BODY_ES_P2__" data-en="__POST_BODY_EN_P2__" data-fr="__POST_BODY_FR_P2__">__POST_BODY_ES_P2__</p>
+
+    <a href="index.html" class="blog-post-back" data-es="← Volver al blog" data-en="← Back to blog" data-fr="← Retour au blog">← Volver al blog</a>
+  </article>
+
+  <!-- ========== FOOTER / CONTACTO ========== -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <p style="font-weight:800;font-size:1.3rem;color:white;">Andrés Pérez Coronado</p>
+          <p class="footer-tagline" data-es="PhD · Founder & AI/ML Architect · FastAnalytics S.A.S." data-en="PhD · Founder & AI/ML Architect · FastAnalytics S.A.S." data-fr="Doctorat · Fondateur & Architecte IA/ML · FastAnalytics S.A.S.">PhD · Founder & AI/ML Architect · FastAnalytics S.A.S.</p>
+          <a href="mailto:hola@fastanalytics.co" class="btn btn-primary btn-lg footer-cta" data-es="Hablemos" data-en="Let's talk" data-fr="Parlons">Hablemos</a>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h4 data-es="Navegación" data-en="Navigation" data-fr="Navigation">Navegación</h4>
+            <ul>
+              <li><a href="../index.html" data-es="Inicio" data-en="Home" data-fr="Accueil">Inicio</a></li>
+              <li><a href="../trayectoria.html" data-es="Trayectoria" data-en="Background" data-fr="Parcours">Trayectoria</a></li>
+              <li><a href="../portafolio.html" data-es="Portafolio" data-en="Portfolio" data-fr="Portfolio">Portafolio</a></li>
+              <li><a href="index.html" data-es="Blog" data-en="Blog" data-fr="Blog">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-es="Contacto" data-en="Contact" data-fr="Contact">Contacto</h4>
+            <ul>
+              <li><a href="mailto:hola@fastanalytics.co">hola@fastanalytics.co</a></li>
+              <li data-es="Colombia" data-en="Colombia" data-fr="Colombie">Colombia</li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4 data-es="Social" data-en="Social" data-fr="Réseaux">Social</h4>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/andres-perez-coronado-63792618/" target="_blank" rel="noopener">LinkedIn</a></li>
+              <li><a href="https://independent.academia.edu/AndrésPérezCoronado" target="_blank" rel="noopener">Academia.edu</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Andrés Pérez Coronado. <span data-es="Todos los derechos reservados." data-en="All rights reserved." data-fr="Tous droits réservés.">Todos los derechos reservados.</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.PAGE_TITLES = {
+      es: '__POST_TITLE_ES__ | Andrés Pérez Coronado',
+      en: '__POST_TITLE_EN__ | Andrés Pérez Coronado',
+      fr: '__POST_TITLE_FR__ | Andrés Pérez Coronado'
+    };
+  </script>
+  <script src="../js/main.js?v=1"></script>
+</body>
+</html>

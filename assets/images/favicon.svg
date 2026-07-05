@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Ultra-simple solid nonagon favicon for 16x16 -->
+  <polygon
+    points="16,1 26,4.5 30,13 28,22.5 21,29 11,29 4,22.5 2,13 6,4.5"
+    fill="#006D6D"/>
+  <!-- Single accent mark -->
+  <rect x="18" y="8" width="5" height="18" rx="2" fill="#D4883A"/>
+</svg>

@@ -1,0 +1,54 @@
+# Andrés Pérez Coronado
+
+> Founder & AI/ML Architect, FastAnalytics S.A.S. 20+ años construyendo modelos matemáticos y sistemas de IA para la seguridad ciudadana en Latinoamérica.
+
+## Profile
+- Name: Andrés Pérez Coronado
+- Role: Founder & AI/ML Architect, FastAnalytics S.A.S.
+- Website: https://andres-perez-coronado.fastanalytics.co
+- Email: hola@fastanalytics.co
+- Location: Colombia
+- Languages: Spanish, English, French
+
+## Education
+- PhD in Mathematical Engineering — Universidad EAFIT (2025)
+- MSc in Management — IAE, Université Grenoble Alpes
+- Humphrey Fellow — University of Minnesota
+- Fulbright Scholar
+
+## Experience
+- 20+ years in citizen security analytics; led teams of 80+ analysts within the Colombian National Police
+- Founder & AI/ML Architect, FastAnalytics S.A.S. (2024–present)
+
+## Upcoming
+- Speaker, IACP 2026 Technology Conference — "Finding the Missing Links: Using AI to Map and Disrupt Transnational Crime Networks"
+
+## Proven Results
+- December 2021: Colombia's safest December in 19 years (-17% homicides nationwide, -33% Bogotá, 772 municipalities with zero homicides). Cuadrantes Outliers model, designed and deployed by Andrés Pérez Coronado
+- 2024: Crime trend broken in Colombia (-17.8% robbery, -25.9% residential theft, -13% massacres, 7 of 11 crimes reduced in Bogotá). Multicrimen model, designed and deployed by Andrés Pérez Coronado
+
+## Publications
+- Research profile: https://independent.academia.edu/AndrésPérezCoronado (7+ academic papers)
+- Book: "Policía para el Desarrollo Humano" (Grupo Editorial Ibáñez, 2021)
+- Book (co-author, all chapters): "Analítica de datos para la seguridad ciudadana" (Editorial Logos, 2024)
+
+## Selected Projects
+- Cuadrantes Outliers — spatiotemporal outlier-detection model for homicide reduction, Colombia (2021)
+- Multicrimen — multi-crime predictive model, Colombia (2024)
+- AlejoSeguro — Telegram bot collecting georeferenced citizen security perceptions in Bogotá
+- AlejoGeo — spatiotemporal intelligence platform (audio/text/video/image collection via chatbot)
+- GabyVigía — predictive decision-making system (Watch · Predict · Decide)
+- TavoDebate — multi-AI platform for legislative and regulatory sessions
+
+## Affiliations
+- Founder, FastAnalytics S.A.S. — https://fastanalytics.co (spatiotemporal AI for predictive decisions)
+
+## Pages
+- Home: https://andres-perez-coronado.fastanalytics.co
+- Trayectoria: https://andres-perez-coronado.fastanalytics.co/trayectoria.html
+- Portafolio: https://andres-perez-coronado.fastanalytics.co/portafolio.html
+- Blog: https://andres-perez-coronado.fastanalytics.co/blog/
+
+## Social
+- LinkedIn: https://www.linkedin.com/in/andres-perez-coronado-63792618/
+- Academia.edu: https://independent.academia.edu/AndrésPérezCoronado
