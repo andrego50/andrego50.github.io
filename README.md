@@ -1,6 +1,6 @@
 # andres-perez-coronado
 
-Sitio personal de Andrés Pérez Coronado — trayectoria, portafolio de proyectos y blog. Se publica en `andrego50.github.io/AndresPerezCoronado`.
+Sitio personal de Andrés Pérez Coronado — trayectoria, portafolio de proyectos y blog. Se publica en `andrego50.github.io`.
 
 Repositorio independiente del sitio de FastAnalytics S.A.S. (`web_site_fastanalytics`), pero forkeado del mismo stack: HTML/CSS/JS plano, sin build, desplegado en GitHub Pages.
 

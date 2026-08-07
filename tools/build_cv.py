@@ -46,7 +46,7 @@ CV = {
         "role": "PhD · Founder & AI/ML Architect, FastAnalytics S.A.S.",
         "contact": [
             ("Correo", "hola@fastanalytics.co", "mailto:hola@fastanalytics.co"),
-            ("Sitio", "andrego50.github.io/AndresPerezCoronado", "https://andrego50.github.io/AndresPerezCoronado"),
+            ("Sitio", "andrego50.github.io", "https://andrego50.github.io"),
             ("LinkedIn", "andres-perez-coronado", "https://www.linkedin.com/in/andres-perez-coronado-63792618/"),
             ("Ubicación", "Colombia", None),
         ],
@@ -156,7 +156,7 @@ CV = {
         "role": "PhD · Founder & AI/ML Architect, FastAnalytics S.A.S.",
         "contact": [
             ("Email", "hola@fastanalytics.co", "mailto:hola@fastanalytics.co"),
-            ("Website", "andrego50.github.io/AndresPerezCoronado", "https://andrego50.github.io/AndresPerezCoronado"),
+            ("Website", "andrego50.github.io", "https://andrego50.github.io"),
             ("LinkedIn", "andres-perez-coronado", "https://www.linkedin.com/in/andres-perez-coronado-63792618/"),
             ("Location", "Colombia", None),
         ],

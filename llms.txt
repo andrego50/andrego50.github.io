@@ -5,7 +5,7 @@
 ## Profile
 - Name: Andrés Pérez Coronado
 - Role: Founder & AI/ML Architect, FastAnalytics S.A.S.
-- Website: https://andrego50.github.io/AndresPerezCoronado
+- Website: https://andrego50.github.io
 - Email: hola@fastanalytics.co
 - Location: Colombia
 - Languages: Spanish, English, French
@@ -47,17 +47,17 @@
 - Topics: disrupting transnational crime networks with AI; taking models from research to patrol operations; spatiotemporal crime modeling; citizen security oriented to human development
 - Formats: 20-minute keynote, 45-minute session, half-day workshop
 - Presents in Spanish, English, and French
-- Speaker kit (ready-to-use bios in three languages, official photo): https://andrego50.github.io/AndresPerezCoronado/speaker.html
+- Speaker kit (ready-to-use bios in three languages, official photo): https://andrego50.github.io/speaker.html
 
 ## Pages
-- Home: https://andrego50.github.io/AndresPerezCoronado
-- Trayectoria (background): https://andrego50.github.io/AndresPerezCoronado/trayectoria.html
-- Publicaciones (publications): https://andrego50.github.io/AndresPerezCoronado/publicaciones.html
-- Portafolio (portfolio): https://andrego50.github.io/AndresPerezCoronado/portafolio.html
-- Speaker kit: https://andrego50.github.io/AndresPerezCoronado/speaker.html
-- Blog: https://andrego50.github.io/AndresPerezCoronado/blog/
-- CV (PDF, Spanish): https://andrego50.github.io/AndresPerezCoronado/cv-andres-perez-coronado-es.pdf
-- CV (PDF, English): https://andrego50.github.io/AndresPerezCoronado/cv-andres-perez-coronado-en.pdf
+- Home: https://andrego50.github.io
+- Trayectoria (background): https://andrego50.github.io/trayectoria.html
+- Publicaciones (publications): https://andrego50.github.io/publicaciones.html
+- Portafolio (portfolio): https://andrego50.github.io/portafolio.html
+- Speaker kit: https://andrego50.github.io/speaker.html
+- Blog: https://andrego50.github.io/blog/
+- CV (PDF, Spanish): https://andrego50.github.io/cv-andres-perez-coronado-es.pdf
+- CV (PDF, English): https://andrego50.github.io/cv-andres-perez-coronado-en.pdf
 
 ## Social
 - LinkedIn: https://www.linkedin.com/in/andres-perez-coronado-63792618/

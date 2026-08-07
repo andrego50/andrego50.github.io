@@ -66,17 +66,20 @@ def collect_files() -> list[Path]:
 def rewrite(text: str, new_base: str) -> str:
     """Sustituye cualquier base conocida por la nueva.
 
-    La base nueva se aparca en un centinela antes de sustituir, porque si no
-    una base vieja que sea prefijo de la nueva (andrego50.github.io dentro de
-    andrego50.github.io/AndresPerezCoronado) volvería a expandirse en cada
-    pasada y la ruta se duplicaría.
-    """
-    text = text.replace(new_base, SENTINEL)
+    Todas las bases —incluida la nueva— se aparcan primero en un centinela, y
+    en orden de más larga a más corta. Ese orden es lo que hace correcta la
+    sustitución en los dos sentidos, porque una base puede ser prefijo de otra
+    («andrego50.github.io» lo es de «andrego50.github.io/AndresPerezCoronado»):
 
-    # De más larga a más corta: así "host/ruta" gana sobre "host" a secas.
-    for old in sorted(KNOWN_BASES, key=len, reverse=True):
-        if old == new_base:
-            continue
+    - al pasar de raíz a subruta, si se sustituyera primero la corta quedaría
+      la ruta anidada;
+    - al volver de subruta a raíz, si se sustituyera primero la corta quedaría
+      un «/AndresPerezCoronado» huérfano colgando.
+
+    Meter la base nueva en el mismo orden, en vez de tratarla aparte, da además
+    la idempotencia gratis.
+    """
+    for old in sorted(set(KNOWN_BASES) | {new_base}, key=len, reverse=True):
         text = text.replace(old, SENTINEL)
 
     return text.replace(SENTINEL, new_base)
