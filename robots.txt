@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /blog/_template.html
 
-Sitemap: https://andres-perez-coronado.fastanalytics.co/sitemap.xml
+Sitemap: https://andrego50.github.io/sitemap.xml
 
 # LLM-friendly structured info
-# See https://andres-perez-coronado.fastanalytics.co/llms.txt
+# See https://andrego50.github.io/llms.txt
