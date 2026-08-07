@@ -1,16 +1,28 @@
 #!/usr/bin/env python3
-"""Reescribe el dominio del sitio en todos los archivos que lo llevan absoluto.
+"""Reescribe la URL base del sitio en todos los archivos que la llevan absoluta.
 
-El scaffold nació apuntando a andres-perez-coronado.fastanalytics.co y esa URL
-está incrustada en canonical, og:url, hreflang, JSON-LD, sitemap.xml, robots.txt
-y llms.txt. Este script la cambia de golpe y, si el destino es un dominio de
-github.io, borra además el archivo CNAME (que es justamente lo que forzaría a
-GitHub Pages a seguir sirviendo en el dominio viejo).
+La URL base está incrustada en canonical, og:url, hreflang, JSON-LD,
+sitemap.xml, robots.txt y llms.txt. Este script la cambia de golpe.
 
+Acepta base con o sin ruta, porque GitHub Pages sirve distinto según cómo se
+llame el repo:
+
+    # sitio de usuario (repo llamado igual que la cuenta) -> raíz
     python3 tools/set_domain.py andresperezcoronado.github.io
-    python3 tools/set_domain.py andresperezcoronado.com   # dominio propio
 
-Es idempotente y se puede correr las veces que haga falta.
+    # sitio de proyecto (cualquier otro nombre de repo) -> subruta
+    python3 tools/set_domain.py andrego50.github.io/AndresPerezCoronado
+
+    # dominio propio
+    python3 tools/set_domain.py andresperezcoronado.com
+
+Los enlaces relativos del sitio (href="trayectoria.html") funcionan igual en
+ambos casos, así que solo hay que tocar los absolutos.
+
+Del archivo CNAME se encarga solo: lo borra si el destino es github.io (donde
+no aplica) y lo escribe si es un dominio propio.
+
+Es idempotente: correrlo dos veces con la misma base no duplica la ruta.
 """
 
 from __future__ import annotations
@@ -20,9 +32,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 
-# Cualquier host que el sitio haya usado antes. Se añaden aquí según se migre.
-KNOWN_HOSTS = [
+# Cualquier base que el sitio haya usado. Se añaden aquí según se migre.
+KNOWN_BASES = [
     "andres-perez-coronado.fastanalytics.co",
+    "andrego50.github.io/AndresPerezCoronado",
     "andresperezcoronado.github.io",
     "andrego50.github.io",
 ]
@@ -38,9 +51,7 @@ TARGETS = [
     "README.md",
 ]
 
-# Hosts que sirven por HTTPS pero NO admiten CNAME propio: si el sitio va a uno
-# de estos, el archivo CNAME debe desaparecer del repositorio.
-GITHUB_IO_SUFFIX = ".github.io"
+SENTINEL = "\x00BASE\x00"
 
 
 def collect_files() -> list[Path]:
@@ -52,38 +63,56 @@ def collect_files() -> list[Path]:
     return list(seen)
 
 
+def rewrite(text: str, new_base: str) -> str:
+    """Sustituye cualquier base conocida por la nueva.
+
+    La base nueva se aparca en un centinela antes de sustituir, porque si no
+    una base vieja que sea prefijo de la nueva (andrego50.github.io dentro de
+    andrego50.github.io/AndresPerezCoronado) volvería a expandirse en cada
+    pasada y la ruta se duplicaría.
+    """
+    text = text.replace(new_base, SENTINEL)
+
+    # De más larga a más corta: así "host/ruta" gana sobre "host" a secas.
+    for old in sorted(KNOWN_BASES, key=len, reverse=True):
+        if old == new_base:
+            continue
+        text = text.replace(old, SENTINEL)
+
+    return text.replace(SENTINEL, new_base)
+
+
 def main(argv: list[str]) -> int:
     if len(argv) != 2:
         print(__doc__)
         return 2
 
-    new_host = argv[1].strip().rstrip("/")
-    if new_host.startswith("http"):
-        print("Pasa solo el host, sin esquema (p. ej. andresperezcoronado.github.io)")
+    new_base = argv[1].strip().strip("/")
+    if new_base.startswith("http"):
+        print("Pasa solo la base, sin esquema (p. ej. andrego50.github.io/AndresPerezCoronado)")
         return 2
 
-    old_hosts = [h for h in KNOWN_HOSTS if h != new_host]
+    host = new_base.split("/")[0]
     changed = 0
 
     for path in collect_files():
-        text = original = path.read_text(encoding="utf-8")
-        for old in old_hosts:
-            text = text.replace(old, new_host)
+        original = path.read_text(encoding="utf-8")
+        text = rewrite(original, new_base)
         if text != original:
             path.write_text(text, encoding="utf-8")
             changed += 1
             print(f"  actualizado  {path.relative_to(ROOT)}")
 
     cname = ROOT / "CNAME"
-    if new_host.endswith(GITHUB_IO_SUFFIX):
+    if host.endswith(".github.io"):
         if cname.exists():
             cname.unlink()
-            print("  eliminado    CNAME  (GitHub Pages servirá en el dominio por defecto)")
+            print("  eliminado    CNAME  (no aplica en github.io)")
     else:
-        cname.write_text(new_host + "\n", encoding="utf-8")
-        print(f"  escrito      CNAME -> {new_host}")
+        cname.write_text(host + "\n", encoding="utf-8")
+        print(f"  escrito      CNAME -> {host}")
 
-    print(f"\n{changed} archivos actualizados. Dominio: https://{new_host}")
+    print(f"\n{changed} archivos actualizados. Sitio: https://{new_base}")
     return 0
 
 

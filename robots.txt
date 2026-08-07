@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /blog/_template.html
 
-Sitemap: https://andrego50.github.io/sitemap.xml
+Sitemap: https://andrego50.github.io/AndresPerezCoronado/sitemap.xml
 
 # LLM-friendly structured info
-# See https://andrego50.github.io/llms.txt
+# See https://andrego50.github.io/AndresPerezCoronado/llms.txt
